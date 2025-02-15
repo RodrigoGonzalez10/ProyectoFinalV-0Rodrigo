@@ -11,7 +11,7 @@ HTML5
 
 CSS3 
 
-Figma  **Link al proyecto** --> https://www.figma.com/design/VbbSgOYLW8FbjTXSaUVB17/ProyectoFinalV0Rodrigo?node-id=0-1&t=cIGQx35bIlMubifH-1
+Figma --> https://www.figma.com/design/VbbSgOYLW8FbjTXSaUVB17/ProyectoFinalV0Rodrigo?node-id=0-1&t=cIGQx35bIlMubifH-1
 
 Git y GitHub 
 
