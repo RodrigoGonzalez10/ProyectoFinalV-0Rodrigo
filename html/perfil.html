@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+        <!-- Header -->
+        <header class="main-container">
+            <div class="inner-container">
+                <div class="title">ABCD</div>
+                <div class="price-container">
+                    <div class="price-background">
+                        <div class="price">10,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+    <div class="container">
+        <div class="outer-border">
+            <h2 class="title">SALDO</h2>
+            <h1 class="saldo">10€</h1>
+
+            <div class="buttons">
+                <button class="btn ingresar">Ingresar</button>
+                <button class="btn retirar">Retirar</button>
+            </div>
+
+            <input type="text" class="card-input" value="4567 .... .... 7702">
+            <div class="payment">
+                <input type="text" class="amount-input" value="20€">
+                <button class="btn realizar">REALIZAR</button>
+            </div>
+
+            <h3 class="subtitle">HISTORIAL DE APUESTAS</h3>
+            <div class="container2">
+                <div class="card card-won">
+                    <div class="title2">GANADA</div>
+                    <div class="match">R.MADRID VS R.SOCIEDAD</div>
+                    <div class="status">RESULTADO ACERTADO</div>
+                </div>
+                <div class="card card-lost">
+                    <div class="title2">PERDIDA</div>
+                    <div class="match">R.MADRID VS R.SOCIEDAD</div>
+                    <div class="status status-failed">RESULTADO FALLIDO</div>
+                </div>
+                <div class="card card-lost">
+                    <div class="title2">PERDIDA</div>
+                    <div class="match">R.MADRID VS R.SOCIEDAD</div>
+                    <div class="status status-failed">RESULTADO FALLIDO</div>
+                </div>
+            </div>
+
+            <h3 class="subtitle">ÚLTIMAS NOTIFICACIONES</h3>
+            <div class="notifications">
+                <a href="" class="ver-todas">Ver todas</a>
+                <p>Su apuesta al partido x ha sido acertada</p>
+                <p>Su apuesta al partido x ha sido acertada</p>
+                <p>Su apuesta al partido x ha sido fallida</p>
+            </div>
+        </div>
+    </div>
+</main>
+     <!-- Footer -->
+     <footer class="navbar">
+        <div class="divider"></div>
+        <div class="navbar-content">
+            <button class="navbar-item" onclick="window.location.href='inicio.html'">
+                <img src="../img/home.png" alt="Inicio" class="navbar-icon">
+                <div class="navbar-text">Inicio</div>
+            </button>
+            <button class="navbar-item" onclick="window.location.href='ranking.html'">
+                <img src="../img/ranking.png" alt="Ranking" class="navbar-icon">
+                <div class="navbar-text">Ranking</div>
+            </button>
+            <button class="navbar-item" onclick="window.location.href='partidos.html'">
+                <img src="../img/partidos.png" alt="Partidos" class="navbar-icon">
+                <div class="navbar-text">Partidos</div>
+            </button>
+            <button class="navbar-item" onclick="window.location.href='apuestas.html'">
+                <img src="../img/apuestas.png" alt="Apuestas" class="navbar-icon">
+                <div class="navbar-text">Apuestas</div>
+            </button>
+            <button class="navbar-item" onclick="window.location.href='perfil.html'">
+                <img src="../img/perfil.png" alt="Perfil" class="navbar-icon">
+                <div class="navbar-text">Perfil</div>
+            </button>
+        </div>
+    </footer>
+</body>
+</html>
