@@ -7,13 +7,13 @@ Este proyecto es una plataforma web de apuestas deportivas. La cual trata de inn
 
 **Tecnologías Utilizadas**
 
-HTML5 (estructura semántica con microdatos)
+HTML5 
 
-CSS3 (Flexbox, Grid, metodología BEM, variables CSS)
+CSS3 
 
-Figma (Diseño preliminar de la interfaz)
+Figma  **Link al proyecto** --> https://www.figma.com/design/VbbSgOYLW8FbjTXSaUVB17/ProyectoFinalV0Rodrigo?node-id=0-1&t=cIGQx35bIlMubifH-1
 
-Git y GitHub (Control de versiones y colaboración)
+Git y GitHub 
 
 
 **Instalación y Uso**
@@ -59,4 +59,4 @@ Integración con GitHub y documentación inicial.
 
 Este proyecto está bajo la licencia Creative Commons BY, lo que permite su uso y modificación con atribución al autor original.
 
-Proyecto desarrollado para la asignatura Diseño de Interfaces Web (DAW2).
+Proyecto desarrollado para la asignatura Diseño de Interfaces Web por Rodrigo González Sánchez (DAW2).
