@@ -33,11 +33,12 @@ header {
     margin: 0 auto;
 }
 .title {
-    color: #EAEAEA;
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 20px;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .price-container {
     display: flex;
