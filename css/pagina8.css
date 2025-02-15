@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Rubik', sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    background: #9fffb0;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nueva fila superior: "Premier League" a la izquierda y la fecha a la derecha */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.competition {
+    color: #d36fa4;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fecha-container {
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: #232323;
+}
+
+.icono-calendario {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.fecha-texto {
+    font-size: 14px;
+    color: #232323;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.team-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.team-image {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+.league {
+    color: rgba(48, 51, 107, 0.4);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.card-footer {
+    margin-top: 10px;
+}
+
+.match-details {
+    font-weight: bold;
+    font-size: 14px;
+    color: #232323;
+    margin-bottom: 4px;
+}
+
+.match-description {
+    font-size: 13px;
+    color: #232323;
+}
