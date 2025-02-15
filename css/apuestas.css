@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+
+/* Header */
+.main-container {
+    width: 100%;
+    height: 93px;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 1384px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 148px;
+    height: 45px;
+}
+
+.price-background {
+    width: 148px;
+    height: 45px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    color: #2C2C2C;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+/* Footer */
+.navbar {
+    width: 100%;
+    height: 88px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    background: #2D2D2D;
+    margin-top: 20px;
+}
+
+.divider {
+    width: 390px;
+    height: 0.5px;
+    background: #343434;
+}
+
+.navbar-content {
+    width: 100%;
+    height: 88px;
+    padding: 0 15px;
+    background: #2D2D2D;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-item {
+    width: 75px;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navbar-icon {
+    width: 44px;
+    height: 40px;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-text {
+    color: #EAEAEA;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.outer-border {
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid #97FEB6;
+    padding: 20px;
+    background: #181818;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.description {
+    text-align: center;
+}
+
+/* Fecha y hora */
+.match-date-time {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.date-time {
+    background-color: #97FEB6;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+
+/* Información del partido */
+.match-card {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    background: #97FEB6;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.match-details {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.league {
+    font-size: 16px;
+    color: #858585;
+    margin-bottom: 5px;
+}
+
+.match {
+    font-size: 24px;
+    font-weight: bold;
+    color: #232323;
+}
+
+.score {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    width: 72px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    outline: none;
+}
+
+/* Modos de apuesta */
+.bet-mode {
+    margin: 20px 0;
+}
+
+.bet-mode-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+}
+
+.bet-buttons {
+    display: flex;
+    flex-direction: column; /* Coloca cada botón en una fila separada */
+    align-items: flex-start; /* Alinea los botones a la izquierda */
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+/* Botones generales */
+.btn2, .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el icono y el texto */
+    padding: 10px 20px; /* Ajusta el tamaño interno del botón */
+    background-color: #97FEB6;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn2 {
+    background-color: white; /* Fondo blanco para el botón Pública */
+}
+
+.btn:hover {
+    background-color: #7bdc9a; /* Efecto hover */
+}
+
+/* Icono dentro del botón */
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Texto dentro del botón */
+.texto {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Descripción */
+.description {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin-left: 5px; /* Espaciado opcional a la izquierda */
+}
+
+/* Invitar amigos */
+.invite .user-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.circle.empty {
+    background-color: white;
+    border: 2px dotted #232323;
+    color: #232323;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Precio */
+.price {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.price-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-input {
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 15px;
+    color: black;
+}
+
+.price-symbol {
+    color: #97FEB6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Botón de publicar apuesta */
+.publish-bet {
+    width: auto; 
+    padding: 15px 197px; 
+    margin: 20px auto;
+    display: block; 
+    background: #97FEB6;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.publish-bet:hover {
+    background: #7bdc9a;
+}

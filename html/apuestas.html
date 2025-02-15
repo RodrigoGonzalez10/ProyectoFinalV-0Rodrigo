@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clasificación Interactiva</title>
+  <link rel="stylesheet" href="../css/apuestas.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-container">
+    <div class="inner-container">
+      <div class="title">ABCD</div>
+      <div class="price-container">
+        <div class="price-background">
+          <div class="price">10,00 €</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido de la página -->
+  <main>
+    <div class="container">
+      <div class="outer-border">
+        <h2 class="title">Comienzo del partido</h2>
+
+        <!-- Fecha y hora -->
+        <div class="match-date-time">
+          <span class="date-time">Sep 13, 2023</span>
+          <span class="date-time">18:00</span>
+        </div>
+
+        <!-- Información del partido -->
+        <div class="match-card">
+          <input type="text" class="score left-score" value="1" pattern="^-?\d*$"
+            title="Solo números enteros (positivos o negativos)" />
+          <div class="match-details">
+            <div class="league">SERIE A</div>
+            <div class="match">Sampdoria vs Inter Milan</div>
+          </div>
+          <input type="text" class="score right-score" value="4" pattern="^-?\d*$"
+            title="Solo números enteros (positivos o negativos)" />
+        </div>
+
+        <!-- Modos de apuesta -->
+        <div class="bet-mode">
+          <h3 class="bet-mode-title">Modo de apuesta</h3>
+          <!-- Botón Pública -->
+          <div class="bet-buttons">
+            <button class="btn2 public">
+              <img src="../img/publica.png" class="icon" alt="Ícono Pública">
+              <nav class="texto">Pública</nav>
+            </button>
+          </div>
+          <p class="description">
+            Tu apuesta va a ser visible para todos los jugadores<br>
+            Todo el mundo puede unirse a tu apuesta.
+          </p>
+          <!-- Botón Privada -->
+          <div class="bet-buttons">
+            <button class="btn private">
+              <img src="../img/privada.png" class="icon" alt="Ícono Privada">
+              <nav class="texto">Privada</nav>
+            </button>
+          </div>
+        </div>
+
+        <!-- Invitar amigos -->
+        <div class="invite">
+          <h3 class="bet-mode-title">Invita a tus amigos</h3>
+          <div class="user-group">
+            <button class="circle empty">
+              <div class="circle-text">+</div>
+            </button>
+            <button class="btn user-btn">
+              <div class="user-icon" style="background: #FFA231;">U1</div> User 1
+            </button>
+            <button class="btn user-btn">
+              <div class="user-icon" style="background: #A676FF;">U2</div> User 2
+            </button>
+            <button class="btn user-btn">
+              <div class="user-icon" style="background: #00FF77;">U3</div> User 3
+            </button>
+          </div>
+        </div>
+
+        <!-- Precio de la apuesta -->
+        <div class="price">
+          <h3 class="bet-mode-title">Precio para realizar la apuesta</h3>
+          <div class="price-box">
+            <input type="text" class="price-input" value="10,00" />
+            <span class="price-symbol">€</span>
+          </div>
+        </div>
+
+        <button class="btn publish-bet">Publicar apuesta</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="navbar">
+    <div class="divider"></div>
+    <div class="navbar-content">
+      <button class="navbar-item" onclick="window.location.href='inicio.html'">
+        <img src="../img/home.png" alt="Inicio" class="navbar-icon">
+        <div class="navbar-text">Inicio</div>
+      </button>
+      <button class="navbar-item" onclick="window.location.href='ranking.html'">
+        <img src="../img/ranking.png" alt="Ranking" class="navbar-icon">
+        <div class="navbar-text">Ranking</div>
+      </button>
+      <button class="navbar-item" onclick="window.location.href='partidos.html'">
+        <img src="../img/partidos.png" alt="Partidos" class="navbar-icon">
+        <div class="navbar-text">Partidos</div>
+      </button>
+      <button class="navbar-item" onclick="window.location.href='apuestas.html'">
+        <img src="../img/apuestas.png" alt="Apuestas" class="navbar-icon">
+        <div class="navbar-text">Apuestas</div>
+      </button>
+      <button class="navbar-item" onclick="window.location.href='perfil.html'">
+        <img src="../img/perfil.png" alt="Perfil" class="navbar-icon">
+        <div class="navbar-text">Perfil</div>
+      </button>
+    </div>
+  </footer>
+
+</body>
+
+</html>
