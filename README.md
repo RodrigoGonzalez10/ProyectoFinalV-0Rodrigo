@@ -46,6 +46,7 @@ git clone https://github.com/RodrigoGonzalez10/ProyectoFinalV-0Rodrigo.git
 - Perfil
 
 **v0 (Versión Inicial)**
+
 Estructura HTML y CSS completa.
 
 Diseño implementado basado en Figma 
