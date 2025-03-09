@@ -18,7 +18,7 @@ body {
     height: 93px;
     background-color: #1E1E1E;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
 }
@@ -258,5 +258,104 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: black;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .title2 {
+        font-size: 16px;
+    }
+
+    .navbar-text {
+        font-size: 14px;
+    }
+
+    .navbar-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .price-container {
+        width: 120px;
+    }
+
+    .price-background {
+        width: 120px;
+        height: 35px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        min-height: calc(100vh - 140px);
+        padding: 0;
+    }
+
+    .main-container {
+        height: 70px;
+    }
+
+    .inner-container {
+        height: 50px;
+    }
+
+    .navbar {
+        height: 70px;
+        margin-top: 10px;
+    }
+
+    .navbar-content {
+        height: 70px;
+    }
+
+    .navbar-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-text {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .title2 {
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .right {
+        font-size: 16px;
+    }
 }
   
