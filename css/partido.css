@@ -73,6 +73,7 @@ header {
     gap: 10px;
     margin-left: 440px;
     margin-top: 10px;
+    animation: fadeInUp 0.5s ease-out forwards;
 }
 .date-option {
     padding: 6px 10px;
@@ -99,6 +100,9 @@ header {
 /* Liga - Sección */
 .league-section {
     margin: 20px 10px;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
 }
 .league-header {
     display: flex;
@@ -136,12 +140,18 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: left;
+    transition: all 0.3s ease;
+    animation: slideInFromRight 0.5s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.1s);
+    opacity: 0;
 }
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(159, 255, 176, 0.4);
+    background: #7bdc9a;
+}
+.card:hover .team-icon {
+    transform: translateX(10px);
 }
 .card-header {
     display: flex;
@@ -168,6 +178,7 @@ header {
     align-items: center;
     font-weight: 300;
     color: #232323;
+    justify-content: flex-start;
 }
 .icono-calendario {
     width: 16px;
@@ -182,6 +193,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    align-items: flex-start;
 }
 .team-icon {
     display: flex;
@@ -189,6 +201,9 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: #000;
+    justify-content: flex-start;
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 .team-image {
     width: 22px;
@@ -196,6 +211,7 @@ header {
     margin-right: 8px;
 }
 .league {
+    text-align: left;
     color: rgba(48, 51, 107, 0.4);
     font-size: 14px;
     font-weight: 500;
@@ -203,6 +219,7 @@ header {
 }
 .card-footer {
     margin-top: 10px;
+    text-align: left;
 }
 .match-details {
     font-weight: bold;
@@ -214,6 +231,11 @@ header {
     font-size: 13px;
     color: #232323;
 }
+
+.card:nth-child(1) { --order: 1; }
+.card:nth-child(2) { --order: 2; }
+.card:nth-child(3) { --order: 3; }
+.card:nth-child(4) { --order: 4; }
 
 /* Footer */
 footer {
@@ -256,10 +278,37 @@ footer {
     height: 40px;
     margin-bottom: 5px;
     filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
 }
 .navbar-text {
     color: #EAEAEA;
     font-size: 20px;
     font-family: Inter, sans-serif;
     font-weight: 500;
+}
+
+.navbar-item:hover .navbar-icon {
+    transform: rotate(15deg);
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
