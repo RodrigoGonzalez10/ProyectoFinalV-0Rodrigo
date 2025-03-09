@@ -10,13 +10,20 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
     font-family: 'Rubik', sans-serif;
     background-color: #2a2a2a;
     color: white;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
 
 /* Header */
 .main-container {
@@ -24,7 +31,7 @@ body {
     height: 93px;
     background-color: #1E1E1E;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
 }
@@ -57,10 +64,8 @@ body {
 }
 
 .price {
-    color: #2C2C2C;
-    font-size: 24px;
-    font-weight: 700;
-
+    text-align: center;
+    margin: 15px 0;
 }
 
 /* Footer */
@@ -127,9 +132,8 @@ body {
 }
 
 .container {
-    position: relative;
     width: 600px;
-    margin-top: 20px;
+    margin: 0 auto;
 }
 
 .outer-border {
@@ -350,11 +354,6 @@ body {
 }
 
 /* Precio */
-.price {
-    text-align: center;
-    margin: 15px 0;
-}
-
 .price-box {
     display: flex;
     align-items: center;
@@ -428,5 +427,147 @@ body {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    .match-date-time {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .date-time {
+        width: 100%;
+        text-align: center;
+    }
+
+    .match-card {
+        flex-direction: row;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .score {
+        width: 60px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .match {
+        font-size: 20px;
+    }
+
+    .navbar-text {
+        font-size: 14px;
+    }
+
+    .navbar-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .price-container {
+        width: 120px;
+    }
+
+    .price-background {
+        width: 120px;
+        height: 35px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .publish-bet {
+        padding: 15px 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container {
+        height: 70px;
+    }
+
+    .inner-container {
+        height: 50px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar-content {
+        height: 70px;
+    }
+
+    .navbar-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-text {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .match {
+        font-size: 16px;
+    }
+
+    .league {
+        font-size: 14px;
+    }
+
+    .bet-mode-title {
+        font-size: 18px;
+    }
+
+    .btn2, .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .user-group {
+        flex-wrap: wrap;
+    }
+
+    .circle.empty {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .publish-bet {
+        padding: 12px 80px;
+        font-size: 16px;
+    }
+
+    .match-card {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .score {
+        width: 50px;
+        height: 40px;
+        font-size: 20px;
     }
 }
