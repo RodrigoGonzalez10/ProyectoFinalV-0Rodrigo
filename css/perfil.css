@@ -67,7 +67,7 @@ body {
     align-items: center;
     bottom: 0;
     background: #2D2D2D;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .divider {
@@ -126,8 +126,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: flex-start;
+    min-height: calc(100vh - 201px);
 }
 
 .outer-border {
@@ -254,6 +254,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 .realizar {
@@ -261,6 +262,10 @@ body {
     font-size: 18px;
     height: 40px;
     transition: all 0.3s ease;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .realizar:hover {
@@ -401,5 +406,199 @@ body {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        min-height: calc(100vh - 171px);
+    }
+
+    .outer-border {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .saldo {
+        font-size: 42px;
+    }
+
+    .card-input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .amount-input {
+        width: 60%;
+    }
+
+    .payment {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .realizar {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .notifications {
+        width: 100%;
+    }
+
+    .navbar-text {
+        font-size: 14px;
+    }
+
+    .navbar-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .price-container {
+        width: 120px;
+    }
+
+    .price-background {
+        width: 120px;
+        height: 35px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 5px auto;
+        min-height: calc(100vh - 145px);
+    }
+
+    .outer-border {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 15px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .saldo {
+        margin: 5px 0;
+    }
+
+    .buttons {
+        margin: 10px 0;
+    }
+
+    .subtitle {
+        margin-top: 15px;
+    }
+
+    .main-container {
+        height: 70px;
+    }
+
+    .inner-container {
+        height: 50px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar-content {
+        height: 70px;
+    }
+
+    .navbar-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-text {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .saldo {
+        font-size: 36px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 8px 12px;
+        height: 90px;
+    }
+
+    .title2 {
+        font-size: 12px;
+    }
+
+    .match {
+        font-size: 9px;
+    }
+
+    .status {
+        font-size: 7px;
+    }
+
+    .notifications p {
+        font-size: 12px;
+    }
+
+    .ver-todas {
+        font-size: 12px;
+    }
+
+    .payment {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .amount-input {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .realizar {
+        padding: 0 15px;
+        font-size: 16px;
     }
 }
