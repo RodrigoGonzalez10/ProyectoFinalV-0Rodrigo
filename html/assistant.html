@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente IA - ABCD</title>
+    <link rel="stylesheet" href="../css/assistant.css">
+</head>
+<body>
+    <button onclick="window.location.href='inicio.html'" class="return-button">
+        <span class="return-icon">←</span>
+        <span>Volver</span>
+    </button>
+
+    <div class="assistant-page">
+        <h1 class="page-title">Asistente de Apuestas Deportivas</h1>
+
+        <main class="assistant-dashboard">
+            <!-- Panel Izquierdo - Mis Apuestas -->
+            <section class="analysis-panel">
+                <h2>Mis Apuestas</h2>
+                <div class="bet-filters">
+                    <button class="filter-btn active">Todas</button>
+                    <button class="filter-btn">Pendientes</button>
+                    <button class="filter-btn">Ganadas</button>
+                    <button class="filter-btn">Perdidas</button>
+                </div>
+
+                <div class="bet-list">
+                    <div class="bet-item won">
+                        <div class="bet-teams">Real Madrid vs Barcelona</div>
+                        <div class="bet-result positive">✓</div>
+                    </div>
+
+                    <div class="bet-item lost">
+                        <div class="bet-teams">Atlético vs Sevilla</div>
+                        <div class="bet-result negative">✗</div>
+                    </div>
+
+                    <div class="bet-item won">
+                        <div class="bet-teams">Valencia vs Betis</div>
+                        <div class="bet-result positive">✓</div>
+                    </div>
+
+                    <div class="bet-item lost">
+                        <div class="bet-teams">Athletic vs Osasuna</div>
+                        <div class="bet-result negative">✗</div>
+                    </div>
+
+                    <div class="bet-item pending">
+                        <div class="bet-teams">Celta vs Mallorca</div>
+                        <div class="bet-status">Pendiente</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Panel Central - Recomendaciones -->
+            <section class="recommendations-panel">
+                <h2>Recomendaciones del Asistente</h2>
+                <div class="recommendations-filters">
+                    <div class="league-selector">
+                        <button class="league-btn active">LaLiga</button>
+                        <button class="league-btn">Premier League</button>
+                        <button class="league-btn">Champions League</button>
+                        <button class="league-btn">Serie A</button>
+                        <button class="league-btn">Bundesliga</button>
+                    </div>
+                </div>
+
+                <div class="recommendations-grid">
+                    <div class="match-card">
+                        <div class="match-header">
+                            <span class="match-league">LaLiga</span>
+                            <span class="match-date">Hoy, 20:00</span>
+                        </div>
+                        <div class="match-teams">
+                            <span class="team-name">Real Madrid vs Barcelona</span>
+                        </div>
+                        <div class="betting-options">
+                            <button class="bet-option recommended">
+                                <span class="bet-name">Victoria Local</span>
+                                <span class="bet-odd">2.5</span>
+                            </button>
+                            <button class="bet-option">
+                                <span class="bet-name">Empate</span>
+                                <span class="bet-odd">3.2</span>
+                            </button>
+                            <button class="bet-option">
+                                <span class="bet-name">Victoria Visitante</span>
+                                <span class="bet-odd">2.8</span>
+                            </button>
+                        </div>
+                        <div class="ai-prediction">
+                            <div class="prediction-header">
+                                <span>Predicción IA</span>
+                                <span class="confidence">85% confianza</span>
+                            </div>
+                            <div class="prediction-bar">
+                                <div class="prediction-progress" style="width: 85%"></div>
+                            </div>
+                            <p class="prediction-explanation">
+                                El Real Madrid muestra mejor forma en casa y el Barcelona tiene bajas importantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="match-header">
+                            <span class="match-league">Premier League</span>
+                            <span class="match-date">Mañana, 16:00</span>
+                        </div>
+                        <div class="match-teams">
+                            <span class="team-name">Manchester City vs Liverpool</span>
+                        </div>
+                        <div class="betting-options">
+                            <button class="bet-option">
+                                <span class="bet-name">Victoria Local</span>
+                                <span class="bet-odd">1.8</span>
+                            </button>
+                            <button class="bet-option recommended">
+                                <span class="bet-name">Empate</span>
+                                <span class="bet-odd">3.5</span>
+                            </button>
+                            <button class="bet-option">
+                                <span class="bet-name">Victoria Visitante</span>
+                                <span class="bet-odd">4.2</span>
+                            </button>
+                        </div>
+                        <div class="ai-prediction">
+                            <div class="prediction-header">
+                                <span>Predicción IA</span>
+                                <span class="confidence">75% confianza</span>
+                            </div>
+                            <div class="prediction-bar">
+                                <div class="prediction-progress" style="width: 75%"></div>
+                            </div>
+                            <p class="prediction-explanation">
+                                Ambos equipos muestran un rendimiento similar y tienen historial de empates en encuentros directos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Panel Derecho - Estadísticas -->
+            <section class="stats-panel">
+                <h2>Mis Estadísticas</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Balance Total</h3>
+                        <div class="stat-value positive">+125.50€</div>
+                        <div class="stat-trend positive">↑ 15% este mes</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Racha Actual</h3>
+                        <div class="stat-value">5 aciertos</div>
+                        <div class="stat-trend positive">Mejor racha</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Efectividad</h3>
+                        <div class="stat-value">75%</div>
+                        <div class="stat-trend neutral">Últimos 30 días</div>
+                    </div>
+                </div>
+
+                <div class="best-categories">
+                    <h3>Mejores Categorías</h3>
+                    <div class="category-list">
+                        <div class="category-item">
+                            <span class="category-name">Victoria Local</span>
+                            <div class="category-bar">
+                                <div class="category-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="category-value">85%</span>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-name">Victoria Visitante</span>
+                            <div class="category-bar">
+                                <div class="category-progress" style="width: 72%"></div>
+                            </div>
+                            <span class="category-value">72%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html> 

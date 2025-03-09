@@ -5,227 +5,336 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABCD</title>
     <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/assistant.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header class="main-container">
-        <div class="inner-container">
-            <div class="title">ABCD</div>
-            <div class="price-container">
-                <div class="price-background">
-                    <div class="price">10,00 €</div>
+    <div class="loader"></div>
+    <div class="page-content">
+        <!-- Header -->
+        <header class="main-container">
+            <div class="inner-container">
+                <div class="title">ABCD</div>
+                <div class="price-container">
+                    <div class="price-background">
+                        <div class="price">10,00 €</div>
+                    </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Asistente Flotante -->
+        <div class="assistant-container">
+            <div class="assistant-ball">
+                <!-- El efecto de brillo se maneja con pseudo-elementos en CSS -->
             </div>
         </div>
-    </header>
 
-    <!-- Contenido de la página -->
-    <main>
-        <!-- Apuestas amigos -->
-        <div class="title2">Hola, usuario</div>
-        <div class="title">Apuestas de tus amigos</div>
-        <div class="contenedor">
-            <div class="componente">
-                <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
-                <div class="titulo-container">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
-                    <div class="titulo">M. UNITED VS M. CITY</div>
-                </div>
-                <div class="separador"></div>
-                <div class="fecha-container">
-                    <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
-                    <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
-                </div>
-                <div class="informacion-container">
-                    <div class="informacion-participantes-container">
-                        <div class="jugadores">
-                            <div class="jugador min">Min</div>
-                            <div class="jugador sen">Sen</div>
-                            <div class="jugador sel">Sel</div>
-                            <div class="jugador kam">Kam</div>
-                        </div>
-                        <div class="informacion-participantes">4 amigos están participando</div>
-                    </div>
-                    <button class="boton-participar">PARTICIPAR</button>
+        <!-- Interfaz del Asistente -->
+        <div class="assistant-interface hidden">
+            <div class="assistant-header">
+                <h3 class="assistant-title">Asistente Deportivo</h3>
+                <button class="assistant-close">&times;</button>
+            </div>
+            <div class="assistant-content">
+                <div class="assistant-message ai">
+                    ¡Hola! Soy tu asistente deportivo. ¿En qué puedo ayudarte hoy?
                 </div>
             </div>
-            <!-- Copia los demás componentes aquí -->
-            <div class="componente">
-                <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
-                <div class="titulo-container">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
-                    <div class="titulo">M. UNITED VS M. CITY</div>
-                </div>
-                <div class="separador"></div>
-                <div class="fecha-container">
-                    <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
-                    <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
-                </div>
-                <div class="informacion-container">
-                    <div class="informacion-participantes-container">
-                        <div class="jugadores">
-                            <div class="jugador min">Min</div>
-                            <div class="jugador sen">Sen</div>
-                            <div class="jugador sel">Sel</div>
-                            <div class="jugador kam">Kam</div>
-                        </div>
-                        <div class="informacion-participantes">4 amigos están participando</div>
-                    </div>
-                    <button class="boton-participar">PARTICIPAR</button>
-                </div>
-            </div>
-            <div class="componente">
-                <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
-                <div class="titulo-container">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
-                    <div class="titulo">M. UNITED VS M. CITY</div>
-                </div>
-                <div class="separador"></div>
-                <div class="fecha-container">
-                    <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
-                    <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
-                </div>
-                <div class="informacion-container">
-                    <div class="informacion-participantes-container">
-                        <div class="jugadores">
-                            <div class="jugador min">Min</div>
-                            <div class="jugador sen">Sen</div>
-                            <div class="jugador sel">Sel</div>
-                            <div class="jugador kam">Kam</div>
-                        </div>
-                        <div class="informacion-participantes">4 amigos están participando</div>
-                    </div>
-                    <button class="boton-participar">PARTICIPAR</button>
-                </div>
-            </div>
-        </div>
-        <!-- Invita amigos -->
-        <div class="title">Invita a tus amigos</div>
-        <div class="contenedor">
-        <div class="container2">
-            <div class="circle-container">
-                <button class="circle empty">
-                    <div class="circle-text">+</div>
+            <div class="assistant-controls">
+                <button class="assistant-button secondary">
+                    <i class="fas fa-microphone"></i>
+                    Hablar
                 </button>
-                <div class="circle blue">
-                    <div class="circle-text">Jum</div>
-                </div>
-                <div class="circle orange">
-                    <div class="circle-text">Kam</div>
-                </div>
-                <div class="circle red">
-                    <div class="circle-text">Sel</div>
-                </div>
-                <div class="circle dark-blue">
-                    <div class="circle-text">Sen</div>
-                </div>
-                <div class="circle teal">
-                    <div class="circle-text">Min</div>
-                </div>
+                <button class="assistant-button primary" onclick="window.location.href='assistant.html'">
+                    Ver recomendaciones
+                </button>
             </div>
         </div>
-        </div>
-        <!-- Seguir equipos -->
-        <div class="title">Sigue a tus equipos favoritos</div>
-        <div class="contenedor">
 
-        <div class="card">
-            <div class="card-header">
-              <div class="competition">LaLiga</div>
-              <div class="team-info">
-                <div class="team-name">
-                  <div class="team-icon">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
+        <!-- Contenido de la página -->
+        <main>
+            <!-- Apuestas amigos -->
+            <div class="title2">Hola, usuario</div>
+            <div class="title">Apuestas de tus amigos</div>
+            <div class="contenedor">
+                <div class="componente">
+                    <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
+                    <div class="titulo-container">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
+                        <div class="titulo">M. UNITED VS M. CITY</div>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="fecha-container">
+                        <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
+                        <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
+                    </div>
+                    <div class="informacion-container">
+                        <div class="informacion-participantes-container">
+                            <div class="jugadores">
+                                <div class="jugador min">Min</div>
+                                <div class="jugador sen">Sen</div>
+                                <div class="jugador sel">Sel</div>
+                                <div class="jugador kam">Kam</div>
+                            </div>
+                            <div class="informacion-participantes">4 amigos están participando</div>
+                        </div>
+                        <button class="boton-participar">PARTICIPAR</button>
+                    </div>
+                </div>
+                <!-- Copia los demás componentes aquí -->
+                <div class="componente">
+                    <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
+                    <div class="titulo-container">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
+                        <div class="titulo">M. UNITED VS M. CITY</div>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="fecha-container">
+                        <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
+                        <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
+                    </div>
+                    <div class="informacion-container">
+                        <div class="informacion-participantes-container">
+                            <div class="jugadores">
+                                <div class="jugador min">Min</div>
+                                <div class="jugador sen">Sen</div>
+                                <div class="jugador sel">Sel</div>
+                                <div class="jugador kam">Kam</div>
+                            </div>
+                            <div class="informacion-participantes">4 amigos están participando</div>
+                        </div>
+                        <button class="boton-participar">PARTICIPAR</button>
+                    </div>
+                </div>
+                <div class="componente">
+                    <div class="propuesta">Propuesta por <span class="usuario">User</span></div>
+                    <div class="titulo-container">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="icono-camiseta">
+                        <div class="titulo">M. UNITED VS M. CITY</div>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="fecha-container">
+                        <img src="../img/reloj.png" alt="Calendario" class="icono-calendario">
+                        <div class="fecha-texto">Mañana, 13 sep - 18:00</div>
+                    </div>
+                    <div class="informacion-container">
+                        <div class="informacion-participantes-container">
+                            <div class="jugadores">
+                                <div class="jugador min">Min</div>
+                                <div class="jugador sen">Sen</div>
+                                <div class="jugador sel">Sel</div>
+                                <div class="jugador kam">Kam</div>
+                            </div>
+                            <div class="informacion-participantes">4 amigos están participando</div>
+                        </div>
+                        <button class="boton-participar">PARTICIPAR</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Invita amigos -->
+            <div class="title">Invita a tus amigos</div>
+            <div class="contenedor">
+            <div class="container2">
+                <div class="circle-container">
+                    <button class="circle empty">
+                        <div class="circle-text">+</div>
+                    </button>
+                    <div class="circle blue">
+                        <div class="circle-text">Jum</div>
+                    </div>
+                    <div class="circle orange">
+                        <div class="circle-text">Kam</div>
+                    </div>
+                    <div class="circle red">
+                        <div class="circle-text">Sel</div>
+                    </div>
+                    <div class="circle dark-blue">
+                        <div class="circle-text">Sen</div>
+                    </div>
+                    <div class="circle teal">
+                        <div class="circle-text">Min</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Seguir equipos -->
+            <div class="title">Sigue a tus equipos favoritos</div>
+            <div class="contenedor">
+
+            <div class="card">
+                <div class="card-header">
+                  <div class="competition">LaLiga</div>
+                  <div class="team-info">
+                    <div class="team-name">
+                      <div class="team-icon">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
+                      </div>
+                      <div class="league">Primera División Española</div>
+                    </div>
                   </div>
-                  <div class="league">Primera División Española</div>
+                </div>
+                <div class="card-footer">
+                  <button class="follow-btn">Seguir</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="competition">LaLiga</div>
+                  <div class="team-info">
+                    <div class="team-name">
+                      <div class="team-icon">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
+                      </div>
+                      <div class="league">Primera División Española</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="follow-btn">Seguir</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="competition">LaLiga</div>
+                  <div class="team-info">
+                    <div class="team-name">
+                      <div class="team-icon">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
+                      </div>
+                      <div class="league">Primera División Española</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="follow-btn">Seguir</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="competition">LaLiga</div>
+                  <div class="team-info">
+                    <div class="team-name">
+                      <div class="team-icon">
+                        <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
+                      </div>
+                      <div class="league">Primera División Española</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="follow-btn">Seguir</button>
                 </div>
               </div>
             </div>
-            <div class="card-footer">
-              <button class="follow-btn">Seguir</button>
-            </div>
-          </div>
+        </main>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="competition">LaLiga</div>
-              <div class="team-info">
-                <div class="team-name">
-                  <div class="team-icon">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
-                  </div>
-                  <div class="league">Primera División Española</div>
-                </div>
-              </div>
+        <!-- Footer -->
+        <footer class="navbar">
+            <div class="divider"></div>
+            <div class="navbar-content">
+                <button class="navbar-item" onclick="window.location.href='inicio.html'">
+                    <img src="../img/home.png" alt="Inicio" class="navbar-icon">
+                    <div class="navbar-text">Inicio</div>
+                </button>
+                <button class="navbar-item" onclick="window.location.href='ranking.html'">
+                    <img src="../img/ranking.png" alt="Ranking" class="navbar-icon">
+                    <div class="navbar-text">Ranking</div>
+                </button>
+                <button class="navbar-item" onclick="window.location.href='partidos.html'">
+                    <img src="../img/partidos.png" alt="Partidos" class="navbar-icon">
+                    <div class="navbar-text">Partidos</div>
+                </button>
+                <button class="navbar-item" onclick="window.location.href='apuestas.html'">
+                    <img src="../img/apuestas.png" alt="Apuestas" class="navbar-icon">
+                    <div class="navbar-text">Apuestas</div>
+                </button>
+                <button class="navbar-item" onclick="window.location.href='perfil.html'">
+                    <img src="../img/perfil.png" alt="Perfil" class="navbar-icon">
+                    <div class="navbar-text">Perfil</div>
+                </button>
             </div>
-            <div class="card-footer">
-              <button class="follow-btn">Seguir</button>
-            </div>
-          </div>
+        </footer>
+    </div>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="competition">LaLiga</div>
-              <div class="team-info">
-                <div class="team-name">
-                  <div class="team-icon">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
-                  </div>
-                  <div class="league">Primera División Española</div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="follow-btn">Seguir</button>
-            </div>
-          </div>
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader');
+            const pageContent = document.querySelector('.page-content');
+            
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+                pageContent.style.opacity = '1';
+            }, 1000);
+        });
 
-          <div class="card">
-            <div class="card-header">
-              <div class="competition">LaLiga</div>
-              <div class="team-info">
-                <div class="team-name">
-                  <div class="team-icon">
-                    <img src="../img/camiseta.png" alt="Camiseta" class="team-image"> Atlético de Madrid
-                  </div>
-                  <div class="league">Primera División Española</div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="follow-btn">Seguir</button>
-            </div>
-          </div>
-        </div>
-    </main>
+        // Funcionalidad del asistente
+        document.addEventListener('DOMContentLoaded', function() {
+            const ball = document.querySelector('.assistant-ball');
+            const interface = document.querySelector('.assistant-interface');
+            const closeBtn = document.querySelector('.assistant-close');
+            
+            // Mostrar/ocultar interfaz
+            ball.addEventListener('click', () => {
+                interface.classList.toggle('hidden');
+                ball.classList.add('speaking');
+            });
 
-    <!-- Footer -->
-    <footer class="navbar">
-        <div class="divider"></div>
-        <div class="navbar-content">
-            <button class="navbar-item" onclick="window.location.href='inicio.html'">
-                <img src="../img/home.png" alt="Inicio" class="navbar-icon">
-                <div class="navbar-text">Inicio</div>
-            </button>
-            <button class="navbar-item" onclick="window.location.href='ranking.html'">
-                <img src="../img/ranking.png" alt="Ranking" class="navbar-icon">
-                <div class="navbar-text">Ranking</div>
-            </button>
-            <button class="navbar-item" onclick="window.location.href='partidos.html'">
-                <img src="../img/partidos.png" alt="Partidos" class="navbar-icon">
-                <div class="navbar-text">Partidos</div>
-            </button>
-            <button class="navbar-item" onclick="window.location.href='apuestas.html'">
-                <img src="../img/apuestas.png" alt="Apuestas" class="navbar-icon">
-                <div class="navbar-text">Apuestas</div>
-            </button>
-            <button class="navbar-item" onclick="window.location.href='perfil.html'">
-                <img src="../img/perfil.png" alt="Perfil" class="navbar-icon">
-                <div class="navbar-text">Perfil</div>
-            </button>
-        </div>
-    </footer>
+            closeBtn.addEventListener('click', () => {
+                interface.classList.add('hidden');
+                ball.classList.remove('speaking');
+            });
 
+            // Reconocimiento de voz
+            if ('webkitSpeechRecognition' in window) {
+                const recognition = new webkitSpeechRecognition();
+                recognition.continuous = false;
+                recognition.lang = 'es-ES';
+
+                const speakButton = document.querySelector('.assistant-button.secondary');
+                speakButton.addEventListener('click', () => {
+                    ball.classList.add('listening');
+                    recognition.start();
+                });
+
+                recognition.onresult = (event) => {
+                    const text = event.results[0][0].transcript;
+                    addUserMessage(text);
+                    processUserInput(text);
+                };
+
+                recognition.onend = () => {
+                    ball.classList.remove('listening');
+                };
+            }
+
+            // Funciones auxiliares
+            function addUserMessage(text) {
+                const content = document.querySelector('.assistant-content');
+                const message = document.createElement('div');
+                message.className = 'assistant-message user';
+                message.textContent = text;
+                content.appendChild(message);
+                content.scrollTop = content.scrollHeight;
+            }
+
+            function addAIMessage(text) {
+                const content = document.querySelector('.assistant-content');
+                const message = document.createElement('div');
+                message.className = 'assistant-message ai';
+                message.textContent = text;
+                content.appendChild(message);
+                content.scrollTop = content.scrollHeight;
+            }
+
+            function processUserInput(text) {
+                // Aquí iría la lógica de procesamiento de la entrada del usuario
+                const response = "He recibido tu mensaje. ¿En qué más puedo ayudarte?";
+                addAIMessage(response);
+            }
+        });
+    </script>
 </body>
 </html>
