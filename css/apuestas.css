@@ -112,6 +112,11 @@ body {
     height: 40px;
     margin-bottom: 5px;
     filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-item:hover .navbar-icon {
+    transform: rotate(15deg);
 }
 
 .navbar-text {
@@ -152,6 +157,7 @@ body {
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
+    animation: slideUp 0.5s ease-out forwards;
 }
 
 .date-time {
@@ -161,6 +167,12 @@ body {
     font-weight: bold;
     padding: 10px 40px;
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.date-time:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(151, 254, 182, 0.2);
 }
 
 /* Información del partido */
@@ -173,6 +185,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: scaleIn 0.5s ease-out forwards;
+    transition: all 0.3s ease;
+}
+
+.match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(151, 254, 182, 0.3);
 }
 
 .match-details {
@@ -203,6 +222,12 @@ body {
     border-radius: 20px;
     background-color: white;
     outline: none;
+    transition: all 0.3s ease;
+}
+
+.score:focus {
+    border: 2px solid #97FEB6;
+    box-shadow: 0 0 10px rgba(151, 254, 182, 0.3);
 }
 
 /* Modos de apuesta */
@@ -246,8 +271,9 @@ body {
     background-color: white; /* Fondo blanco para el botón Pública */
 }
 
-.btn:hover {
-    background-color: #7bdc9a; /* Efecto hover */
+.btn2:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 254, 182, 0.3);
 }
 
 /* Icono dentro del botón */
@@ -299,6 +325,11 @@ body {
     align-items: center;
     justify-content: center;
     margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.user-btn:hover {
+    transform: scale(1.1);
 }
 
 .user-icon {
@@ -311,6 +342,11 @@ body {
     color: white;
     font-weight: bold;
     margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.user-icon:hover {
+    transform: rotate(360deg);
 }
 
 /* Precio */
@@ -360,4 +396,37 @@ body {
 
 .publish-bet:hover {
     background: #7bdc9a;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.error {
+    animation: shake 0.5s ease-in-out;
+    border: 2px solid #ff4444 !important;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
