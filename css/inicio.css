@@ -21,6 +21,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
+    animation: slideDown 0.5s ease-out;
 }
 
 .inner-container {
@@ -106,6 +107,11 @@ body {
     height: 40px;
     margin-bottom: 5px;
     filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-item:hover .navbar-icon {
+    transform: rotate(15deg);
 }
 
 .navbar-text {
@@ -123,6 +129,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    animation: fadeIn 1s ease-out 0.3s forwards;
+    opacity: 0;
 }
 
 .componente {
@@ -135,6 +143,12 @@ body {
     align-items: center;
     height: 200px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.componente:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .propuesta {
@@ -160,6 +174,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #494949;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .fecha-container {
@@ -210,6 +225,13 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: white;
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.jugador:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .kam { background: #FFBE76; }
@@ -230,6 +252,13 @@ body {
     cursor: pointer;
     width: 100%;
     margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.boton-participar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 254, 182, 0.4);
+    background: #7bdc9a;
 }
 
 .informacion-container {
@@ -254,6 +283,8 @@ body {
     width: 291px;
     height: 70px;
     margin-bottom: 10px;
+    animation: fadeIn 1.2s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 
@@ -273,6 +304,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     margin-top: 20px;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .circle-container {
@@ -292,6 +324,13 @@ body {
     color: white;
     font-size: 13px;
     font-weight: 500;
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .circle.blue {
@@ -320,6 +359,7 @@ body {
     color: #232323;
     font-size: 18px;
     cursor: pointer;
+    animation: pulse 2s infinite;
 }
 
 .circle.empty:hover {
@@ -420,4 +460,82 @@ body {
   
 .follow-btn:hover {
     background: #e0e0e0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #97FEB6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.page-content {
+    opacity: 0;
+    animation: contentFadeIn 0.5s ease-out 1s forwards;
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
