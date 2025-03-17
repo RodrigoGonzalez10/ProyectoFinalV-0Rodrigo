@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABCD</title>
     <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/asistente.css">
+    <link rel="stylesheet" href="../css/estilos-compartidos.css">
 </head>
 <body>
     <div class="loader"></div>
@@ -23,29 +24,29 @@
         </header>
 
         <!-- Asistente Flotante -->
-        <div class="assistant-container">
-            <div class="assistant-ball">
-                <!-- El efecto de brillo se maneja con pseudo-elementos en CSS -->
+        <div class="asistente-container">
+            <div class="asistente-ball">
+                <!-- El efecto de brillo se maneja con CSS -->
             </div>
         </div>
 
         <!-- Interfaz del Asistente -->
-        <div class="assistant-interface hidden">
-            <div class="assistant-header">
-                <h3 class="assistant-title">Asistente Deportivo</h3>
-                <button class="assistant-close">&times;</button>
+        <div class="asistente-interface hidden">
+            <div class="asistente-header">
+                <h3 class="asistente-title">Asistente Deportivo</h3>
+                <button class="asistente-close">&times;</button>
             </div>
-            <div class="assistant-content">
-                <div class="assistant-message ai">
+            <div class="asistente-content">
+                <div class="asistente-message ai">
                     ¡Hola! Soy tu asistente deportivo. ¿En qué puedo ayudarte hoy?
                 </div>
             </div>
-            <div class="assistant-controls">
-                <button class="assistant-button secondary">
+            <div class="asistente-controls">
+                <button class="asistente-button secondary">
                     <i class="fas fa-microphone"></i>
                     Hablar
                 </button>
-                <button class="assistant-button primary" onclick="window.location.href='assistant.html'">
+                <button class="asistente-button primary" onclick="window.location.href='asistente.html'">
                     Ver recomendaciones
                 </button>
             </div>
@@ -272,11 +273,10 @@
 
         // Funcionalidad del asistente
         document.addEventListener('DOMContentLoaded', function() {
-            const ball = document.querySelector('.assistant-ball');
-            const interface = document.querySelector('.assistant-interface');
-            const closeBtn = document.querySelector('.assistant-close');
+            const ball = document.querySelector('.asistente-ball');
+            const interface = document.querySelector('.asistente-interface');
+            const closeBtn = document.querySelector('.asistente-close');
             
-            // Mostrar/ocultar interfaz
             ball.addEventListener('click', () => {
                 interface.classList.toggle('hidden');
                 ball.classList.add('speaking');
