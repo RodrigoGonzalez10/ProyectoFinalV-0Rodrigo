@@ -285,55 +285,7 @@
             closeBtn.addEventListener('click', () => {
                 interface.classList.add('hidden');
                 ball.classList.remove('speaking');
-            });
-
-            // Reconocimiento de voz
-            if ('webkitSpeechRecognition' in window) {
-                const recognition = new webkitSpeechRecognition();
-                recognition.continuous = false;
-                recognition.lang = 'es-ES';
-
-                const speakButton = document.querySelector('.assistant-button.secondary');
-                speakButton.addEventListener('click', () => {
-                    ball.classList.add('listening');
-                    recognition.start();
-                });
-
-                recognition.onresult = (event) => {
-                    const text = event.results[0][0].transcript;
-                    addUserMessage(text);
-                    processUserInput(text);
-                };
-
-                recognition.onend = () => {
-                    ball.classList.remove('listening');
-                };
-            }
-
-            // Funciones auxiliares
-            function addUserMessage(text) {
-                const content = document.querySelector('.assistant-content');
-                const message = document.createElement('div');
-                message.className = 'assistant-message user';
-                message.textContent = text;
-                content.appendChild(message);
-                content.scrollTop = content.scrollHeight;
-            }
-
-            function addAIMessage(text) {
-                const content = document.querySelector('.assistant-content');
-                const message = document.createElement('div');
-                message.className = 'assistant-message ai';
-                message.textContent = text;
-                content.appendChild(message);
-                content.scrollTop = content.scrollHeight;
-            }
-
-            function processUserInput(text) {
-                // Aquí iría la lógica de procesamiento de la entrada del usuario
-                const response = "He recibido tu mensaje. ¿En qué más puedo ayudarte?";
-                addAIMessage(response);
-            }
+            }); 
         });
     </script>
 </body>
