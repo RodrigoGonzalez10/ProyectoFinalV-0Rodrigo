@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
+    <title>Perfil - ABCD</title>
+    <link rel="stylesheet" href="../css/estilos-compartidos.css">
     <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
@@ -19,17 +20,21 @@
             </div>
         </header>
         <main>
-    <div class="container">
+    <div class="container" role="main">
         <div class="outer-border">
             <h2 class="title">SALDO</h2>
-            <h1 class="saldo">10€</h1>
+            <h1 class="saldo" aria-label="Saldo actual: 10 euros">10€</h1>
 
             <div class="buttons">
-                <button class="btn ingresar">Ingresar</button>
-                <button class="btn retirar">Retirar</button>
+                <button class="btn ingresar" aria-label="Ingresar dinero" title="Agregar fondos a tu cuenta">Ingresar</button>
+                <button class="btn retirar" aria-label="Retirar dinero" title="Retirar fondos de tu cuenta">Retirar</button>
             </div>
 
-            <input type="text" class="card-input" value="4567 .... .... 7702">
+            <input type="text" 
+                   class="card-input" 
+                   value="4567 .... .... 7702" 
+                   aria-label="Número de tarjeta"
+                   title="Ingresa el número de tu tarjeta">
             <div class="payment">
                 <input type="text" class="amount-input" value="20€">
                 <button class="btn realizar">REALIZAR</button>
