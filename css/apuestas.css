@@ -571,3 +571,30 @@ main {
         font-size: 20px;
     }
 }
+
+/* Mejoras de accesibilidad */
+.btn2:focus, .btn:focus {
+    outline: 3px solid #97FEB6;
+    outline-offset: 2px;
+}
+
+.price-input:focus {
+    outline: 3px solid #97FEB6;
+    box-shadow: 0 0 5px rgba(151, 254, 182, 0.5);
+}
+
+/* Indicador visual para elementos interactivos al pasar el mouse */
+[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    max-width: 200px;
+    white-space: normal;
+    pointer-events: none;
+    margin-top: 25px;
+}

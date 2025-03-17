@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registro - ABCD</title>
+    <link rel="stylesheet" href="../css/estilos-compartidos.css">
     <link rel="stylesheet" href="../css/registro.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" role="main">
         <div class="outer-border">
             <h2 class="subtitle">Registrarse</h2>
-            <p class="title">Regístrate ahora y empieza a jugar</p>
+            <p class="title" id="form-description">Regístrate ahora y empieza a jugar</p>
             
-            <div class="form-group">
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellidos">
-            </div>
+            <form aria-describedby="form-description">
+                <div class="form-group">
+                    <input type="text" 
+                           placeholder="Nombre" 
+                           aria-label="Nombre"
+                           title="Ingresa tu nombre"
+                           required>
+                    <input type="text" 
+                           placeholder="Apellidos"
+                           aria-label="Apellidos"
+                           title="Ingresa tus apellidos"
+                           required>
+                </div>
 
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Teléfono">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar contraseña">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Teléfono">
+                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Confirmar contraseña">
 
-            <button class="confirm-btn" onclick="window.location.href='inicio.html'">CONFIRMAR</button>
+                <button class="confirm-btn" onclick="window.location.href='inicio.html'">CONFIRMAR</button>
+            </form>
         </div>
     </div>
 </body>

@@ -18,12 +18,13 @@ body {
     color: var(--color-text);
 }
 
-.assistant-page {
+.asistente-page {
     padding-top: 0;
+    opacity: 1;
 }
 
 /* Contenedor del asistente */
-.assistant-container {
+.asistente-container {
     position: fixed;
     top: 120px;
     right: 40px;
@@ -34,7 +35,7 @@ body {
 }
 
 /* Balón del asistente */
-.assistant-ball {
+.asistente-ball {
     width: 64px;
     height: 64px;
     background: radial-gradient(circle at 30% 30%, #000000, #1a1a1a);
@@ -47,7 +48,7 @@ body {
     border: 2px solid var(--color-primary);
 }
 
-.assistant-ball::before {
+.asistente-ball::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -59,7 +60,7 @@ body {
     opacity: 0.7;
 }
 
-.assistant-ball::after {
+.asistente-ball::after {
     content: '';
     position: absolute;
     width: 90%;
@@ -72,26 +73,26 @@ body {
     border-radius: 50%;
 }
 
-.assistant-ball:hover {
+.asistente-ball:hover {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 6px 12px rgba(151, 254, 182, 0.3);
 }
 
-.assistant-ball:active {
+.asistente-ball:active {
     transform: scale(0.95);
 }
 
-.assistant-ball.speaking {
+.asistente-ball.speaking {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
-.assistant-ball.listening {
+.asistente-ball.listening {
     box-shadow: 0 0 0 4px rgba(151, 254, 182, 0.5);
     animation: listening 1.5s ease-in-out infinite;
 }
 
 /* Interfaz del asistente */
-.assistant-interface {
+.asistente-interface {
     position: fixed;
     top: 140px;
     right: 120px;
@@ -110,14 +111,14 @@ body {
     transform-origin: top right;
 }
 
-.assistant-interface.hidden {
+.asistente-interface.hidden {
     transform: scale(0.8);
     opacity: 0;
     pointer-events: none;
 }
 
 /* Cabecera del asistente */
-.assistant-header {
+.asistente-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,13 +127,13 @@ body {
     border-bottom: 1px solid rgba(151, 254, 182, 0.2);
 }
 
-.assistant-title {
+.asistente-title {
     font-size: 18px;
     font-weight: bold;
     color: var(--color-primary);
 }
 
-.assistant-close {
+.asistente-close {
     width: 24px;
     height: 24px;
     border: none;
@@ -147,33 +148,33 @@ body {
     justify-content: center;
 }
 
-.assistant-close:hover {
+.asistente-close:hover {
     transform: rotate(90deg);
     color: #ffffff;
 }
 
 /* Contenido y mensajes */
-.assistant-content {
+.asistente-content {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.assistant-message {
+.asistente-message {
     padding: 12px;
     border-radius: 12px;
     max-width: 85%;
     animation: messageSlide 0.3s ease-out;
 }
 
-.assistant-message.ai {
+.asistente-message.ai {
     background-color: var(--color-primary);
     color: var(--color-text-dark);
     align-self: flex-start;
     border-bottom-left-radius: 4px;
 }
 
-.assistant-message.user {
+.asistente-message.user {
     background-color: #343434;
     color: var(--color-text);
     align-self: flex-end;
@@ -181,7 +182,7 @@ body {
 }
 
 /* Controles */
-.assistant-controls {
+.asistente-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,7 +191,7 @@ body {
     border-top: 1px solid rgba(151, 254, 182, 0.2);
 }
 
-.assistant-button {
+.asistente-button {
     padding: 10px 20px;
     border: none;
     border-radius: 12px;
@@ -200,22 +201,22 @@ body {
     transition: var(--transition-default);
 }
 
-.assistant-button.primary {
+.asistente-button.primary {
     background-color: var(--color-primary);
     color: var(--color-text-dark);
 }
 
-.assistant-button.primary:hover {
+.asistente-button.primary:hover {
     background-color: #7bdc9a;
     transform: translateY(-2px);
 }
 
-.assistant-button.secondary {
+.asistente-button.secondary {
     background-color: #343434;
     color: var(--color-text);
 }
 
-.assistant-button.secondary:hover {
+.asistente-button.secondary:hover {
     background-color: #404040;
     transform: translateY(-2px);
 }
@@ -342,19 +343,19 @@ body {
         padding: 12px;
     }
 
-    .assistant-interface {
+    .asistente-interface {
         width: 90%;
         max-width: 320px;
         right: 16px;
         top: 90px;
     }
 
-    .assistant-container {
+    .asistente-container {
         right: 16px;
         top: 16px;
     }
 
-    .assistant-ball {
+    .asistente-ball {
         width: 56px;
         height: 56px;
     }
@@ -365,7 +366,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .assistant-interface {
+    .asistente-interface {
         width: 85%;
         padding: 12px;
         max-height: 60vh;
@@ -373,17 +374,17 @@ body {
         top: 80px;
     }
 
-    .assistant-container {
+    .asistente-container {
         right: 12px;
         top: 12px;
     }
 
-    .assistant-ball {
+    .asistente-ball {
         width: 48px;
         height: 48px;
     }
 
-    .assistant-button {
+    .asistente-button {
         padding: 8px 16px;
         font-size: 12px;
     }
@@ -428,21 +429,21 @@ body {
 }
 
 /* Estilos para el scrollbar */
-.assistant-interface::-webkit-scrollbar {
+.asistente-interface::-webkit-scrollbar {
     width: 6px;
 }
 
-.assistant-interface::-webkit-scrollbar-track {
+.asistente-interface::-webkit-scrollbar-track {
     background: rgba(151, 254, 182, 0.1);
     border-radius: 3px;
 }
 
-.assistant-interface::-webkit-scrollbar-thumb {
+.asistente-interface::-webkit-scrollbar-thumb {
     background: var(--color-primary);
     border-radius: 3px;
 }
 
-.assistant-interface::-webkit-scrollbar-thumb:hover {
+.asistente-interface::-webkit-scrollbar-thumb:hover {
     background: #7bdc9a;
 }
 
@@ -480,6 +481,7 @@ body {
     padding: 16px;
     max-width: 1400px;
     margin: 0 auto;
+    opacity: 1;
 }
 
 .analysis-panel, .recommendations-panel, .history-panel {
@@ -1055,4 +1057,11 @@ body {
         padding: 8px 14px;
         font-size: 13px;
     }
+}
+
+.page-content {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    opacity: 1;
 } 

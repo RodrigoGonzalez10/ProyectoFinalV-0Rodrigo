@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clasificación Interactiva</title>
+  <title>Apuestas - ABCD</title>
+  <link rel="stylesheet" href="../css/estilos-compartidos.css">
   <link rel="stylesheet" href="../css/apuestas.css">
 </head>
 
@@ -50,8 +51,8 @@
           <h3 class="bet-mode-title">Modo de apuesta</h3>
           <!-- Botón Pública -->
           <div class="bet-buttons">
-            <button class="btn2 public">
-              <img src="../img/publica.png" class="icon" alt="Ícono Pública">
+            <button class="btn2 public" aria-label="Crear apuesta pública" title="Tu apuesta será visible para todos los usuarios">
+              <img src="../img/publica.png" class="icon" alt="Ícono de apuesta pública">
               <nav class="texto">Pública</nav>
             </button>
           </div>
@@ -61,8 +62,8 @@
           </p>
           <!-- Botón Privada -->
           <div class="bet-buttons">
-            <button class="btn private">
-              <img src="../img/privada.png" class="icon" alt="Ícono Privada">
+            <button class="btn private" aria-label="Crear apuesta privada" title="Solo los usuarios invitados podrán ver tu apuesta">
+              <img src="../img/privada.png" class="icon" alt="Ícono de apuesta privada">
               <nav class="texto">Privada</nav>
             </button>
           </div>
@@ -72,10 +73,10 @@
         <div class="invite">
           <h3 class="bet-mode-title">Invita a tus amigos</h3>
           <div class="user-group">
-            <button class="circle empty">
+            <button class="circle empty" aria-label="Agregar amigo a la apuesta" title="Haz clic para invitar amigos">
               <div class="circle-text">+</div>
             </button>
-            <button class="btn user-btn">
+            <button class="btn user-btn" aria-label="Usuario 1 seleccionado" title="Eliminar Usuario 1 de la apuesta">
               <div class="user-icon" style="background: #FFA231;">U1</div> User 1
             </button>
             <button class="btn user-btn">
@@ -91,12 +92,12 @@
         <div class="price">
           <h3 class="bet-mode-title">Precio para realizar la apuesta</h3>
           <div class="price-box">
-            <input type="text" class="price-input" value="10,00" />
+            <input type="text" class="price-input" value="10,00" aria-label="Monto de la apuesta" title="Ingresa el monto a apostar">
             <span class="price-symbol">€</span>
           </div>
         </div>
 
-        <button class="btn publish-bet">Publicar apuesta</button>
+        <button class="btn publish-bet" aria-label="Publicar apuesta" title="Confirmar y publicar tu apuesta">Publicar apuesta</button>
       </div>
     </div>
   </main>
