@@ -20,6 +20,7 @@ body {
 
 .assistant-page {
     padding-top: 0;
+    opacity: 1;
 }
 
 /* Contenedor del asistente */
@@ -112,7 +113,6 @@ body {
 
 .assistant-interface.hidden {
     transform: scale(0.8);
-    opacity: 0;
     pointer-events: none;
 }
 
@@ -480,6 +480,7 @@ body {
     padding: 16px;
     max-width: 1400px;
     margin: 0 auto;
+    opacity: 1;
 }
 
 .analysis-panel, .recommendations-panel, .history-panel {
@@ -1055,4 +1056,11 @@ body {
         padding: 8px 14px;
         font-size: 13px;
     }
+}
+
+.page-content {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    opacity: 1;
 } 
