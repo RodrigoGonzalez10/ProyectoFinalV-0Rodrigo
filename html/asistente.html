@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistente IA - ABCD</title>
-    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/estilos-compartidos.css">
+    <link rel="stylesheet" href="../css/asistente.css">
 </head>
 <body>
-    <button onclick="window.location.href='inicio.html'" class="return-button">
-        <span class="return-icon">←</span>
+    <button onclick="window.location.href='inicio.html'" 
+            class="return-button" 
+            aria-label="Volver a la página principal"
+            title="Regresar al inicio">
+        <span class="return-icon" aria-hidden="true">←</span>
         <span>Volver</span>
     </button>
-
+    
     <div class="assistant-page">
         <h1 class="page-title">Asistente de Apuestas Deportivas</h1>
 
@@ -185,5 +189,6 @@
             </section>
         </main>
     </div>
+
 </body>
 </html> 
