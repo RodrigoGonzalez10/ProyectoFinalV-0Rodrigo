@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABCD</title>
-    <link rel="stylesheet" href="../css/partido.css">
+    <title>Partidos - ABCD</title>
+    <link rel="stylesheet" href="../css/estilos-compartidos.css">
+    <link rel="stylesheet" href="../css/partidos.css">
 </head>
 <body>
 
@@ -31,13 +32,13 @@
         </div>
 
         <!-- Secciones de ligas -->
-        <section class="league-section">
+        <section class="league-section" aria-labelledby="serie-a-title">
             <div class="league-header">
-                <h2 style="color: white;">Serie A</h2>
-                <button class="view-all">Ver Todos</button>
+                <h2 id="serie-a-title" style="color: white;">Serie A</h2>
+                <button class="view-all" aria-label="Ver todos los partidos de Serie A" title="Mostrar todos los partidos">Ver Todos</button>
             </div>
-            <div class="card-container">
-                <button class="card">
+            <div class="card-container" role="list">
+                <button class="card" role="listitem" aria-label="Partido Sampdoria vs Inter Milan" title="Ver detalles del partido">
                     <div class="card-header">
                         <div class="top-row">
                             <div class="competition">SERIE A</div>
